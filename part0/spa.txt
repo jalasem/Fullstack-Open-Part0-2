@@ -1,0 +1,11 @@
+browser->server: HTTP Get /notes
+server-->browser: return HTML-Code
+note left of browser: browser fetches linked files
+browser->server: HTTP GET main.css
+server-->browser: return main.css
+browser->server: HTTP GET spa.js
+server-->browser: return spa.js
+note over browser: spa script runs and request for data.json
+browser->server: HTTP GET data.json
+server-->browser: return data.json
+note left of browser: spa script render notes in data.json on the page
